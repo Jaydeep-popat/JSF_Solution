@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class student {
+        constructor(id, name, age, grade, subjects = []) {
+          this.id = id;
+          this.name = name;
+          this.age = age;
+          this.grade = grade;
+          this.subjects = subjects;
+        }
+
+        displayDetails() {
+          console.log(this.id);
+          console.log(this.name);
+          console.log(this.age);
+          console.log(this.grade);
+          console.log(this.subjects);
+        }
+        addSubject = (sub) => {
+          if (!this.subjects.includes(sub)) {
+            this.subjects.push(sub);
+          }
+        };
+        
+        modifySubjectName = (oldSub, newSub) => {
+          if (this.subjects.includes(oldSub)) {
+            this.subjects[this.subjects.indexOf(oldSub)] = newSub;
+          } else {
+            console.log("subject not found.");
+          }
+        };
+      }
+
+      const student1 = new student(123, "jaydeep", 15, "A", [
+        "maths",
+        "english",
+      ]);
+
+      student1.addSubject("JSF");
+      student1.modifySubjectName("JSF", "javaScriptFrameworks");
+      student1.displayDetails();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Destructuring and Spread Operator Examples</h1>
+    <p>Open console (F12) to see the output</p>
+
+    <script>
+      console.log("=== SIMPLE DESTRUCTURING & SPREAD EXAMPLES ===");
+
+      // 1. Array Destructuring - Getting first two elements
+      console.log("1. Array Destructuring:");
+      const colors = ["red", "blue", "green", "yellow"];
+      const [firstColor, secondColor] = colors;
+      console.log("First color:", firstColor);
+      console.log("Second color:", secondColor);
+      console.log("Original array:", colors);
+
+      // 2. Object Destructuring - Extracting properties
+      console.log("\n2. Object Destructuring:");
+      const student = {
+        name: "John",
+        age: 20,
+        grade: "A"
+      };
+      const {name, age} = student;
+      console.log("Student name:", name);
+      console.log("Student age:", age);
+
+      // 3. Spread Operator - Combining arrays
+      console.log("\n3. Spread Operator with Arrays:");
+      const fruits = ["apple", "banana"];
+      const vegetables = ["carrot", "potato"];
+      const food = [...fruits, ...vegetables];
+      console.log("Fruits:", fruits);
+      console.log("Vegetables:", vegetables);
+      console.log("Combined food:", food);
+
+      // 4. Spread Operator - Copying and adding to objects
+      console.log("\n4. Spread Operator with Objects:");
+      const person = {name: "Alice", age: 25};
+      const personWithCity = {...person, city: "New York"};
+      console.log("Original person:", person);
+      console.log("Person with city:", personWithCity);
+    </script>
+  </body>
+</html>
