@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <label for="element">enter a name of student:=</label>
+      <input type="text" name="" id="element" />
+      <button id="add">Add</button>
+      <ul id="display" style="border: 3px dashed gold"></ul>
+    </div>
+    <script>
+      const inputBox = document.getElementById("element");
+      const button = document.getElementById("add");
+      console.log(inputBox);
+      console.log(button);
+
+      const array = document.getElementById("display");
+
+      console.log(array);
+      button.addEventListener("click", () => {
+        if (inputBox.value !== "") {
+          const li = document.createElement("li");
+          li.textContent = inputBox.value;
+          array.appendChild(li);
+          inputBox.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let students = [
+        {
+          name: "Alice",
+          marks: 15,
+        },
+        {
+          name: "Bob",
+          marks: 30,
+        },
+        {
+          name: "Charlie",
+          marks: 78,
+        },
+        {
+          name: "Diana",
+          marks: 96,
+        },
+        {
+          name: "Eve",
+          marks: 88,
+        },
+      ];
+
+    let cleverStudents = students.filter((std) => std.marks > 35);
+      console.log(cleverStudents);
+    </script>
+  </body>
+</html>
