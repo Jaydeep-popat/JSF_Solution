@@ -1,0 +1,22 @@
+<!-- Write a program in JavaScript that accepts a number as input and prints its multiplication table 
+up to 10 using a loop -->
+<!DOCTYPE html>
+
+<html>
+<body>
+
+<input id="n" placeholder="enter number">
+<button id="b">Show</button>
+<div id="o"></div>
+
+<script>
+b.onclick = () => {
+  let x =Number(document.getElementById("n").value);
+  for(let i=1;i<=10;i++){
+    o.innerHTML += `${x} x ${i} = ${x*i}<br>`;
+  }
+};
+</script>
+
+</body>
+</html>

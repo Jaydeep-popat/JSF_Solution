@@ -1,0 +1,26 @@
+<!-- Armstrong -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <input id ="p" placeholder="Enter number">
+        <button onclick="Armstrong()">Show</button>
+        <script>
+            function Armstrong(){
+                let x= Number(p.value);
+                let n=x;
+                let sum=0;
+                    while(x>0){
+                        let d=x%10;
+                        sum+=d*d*d;
+                        x=Math.floor(x/10);
+                    }
+                if(n === sum){
+                    document.writeln("Armstrong number");
+                }
+                else{
+                    document.writeln("not armstrong number");
+                }
+            }
+        </script>
+    </body>
+</html>

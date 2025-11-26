@@ -1,0 +1,22 @@
+<!-- Write a program to generate and display the Fibonacci series up to N terms using a loop. (C) -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <input id="p" placeholder="enter n terms">
+        <button onclick="fib()">show</button>
+        <div id="o"></div>
+        <script>
+           function fib(){
+                let x = Number(p.value);
+                let a=0,b=1;
+                o.innerHTML=`${a}+${b}`;
+                for(let i=3;i<=x;i++){
+                    let c =a+b;
+                    o.innerHTML+= `+${c}`;
+                    a=b;
+                    b=c;
+                }
+            };
+        </script>
+    </body>
+</html>

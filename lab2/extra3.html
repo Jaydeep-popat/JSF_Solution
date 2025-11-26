@@ -1,0 +1,25 @@
+<!-- Palindrome -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+let x = prompt("enter a number");
+let n = Number(x);
+let v = 0;
+let temp = n;
+
+while (temp > 0) {
+    v = v * 10 + (temp % 10);
+    temp = Math.floor(temp / 10);
+}
+
+if (n === v) {
+    alert("palindrome");
+} else {
+    alert("not palindrome");
+}
+</script>
+
+</body>
+</html>

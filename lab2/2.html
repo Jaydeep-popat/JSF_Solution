@@ -1,0 +1,19 @@
+<!-- Write a program to calculate the factorial of a given number using a for or while loop -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <input id ="p" placeholder="enter value">
+    <button onclick="fact()">show</button>
+    <div id ="o"></div>
+    <script>
+    function fact(){
+      let x=Number(p.value);
+      let n=1;
+      for(let i=1;i<=x;i++){
+        n =n*i;
+      }
+      o.innerText=n;
+    }
+    </script>
+  </body>
+</html>
