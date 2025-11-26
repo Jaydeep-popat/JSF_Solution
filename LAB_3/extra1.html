@@ -1,0 +1,47 @@
+<!-- Factors -->
+<!DOCTYPE html>
+<!-- <html>
+<body>
+    <input id="p" placeholder="Enter number">
+    <button onclick="Factors()">Show</button>
+    <div id="o"></div>
+
+    <script>
+        function Factors(){
+            let x = Number(p.value);
+            let out = "1,";
+
+            for(let i = 2; i <= x/2; i++){
+                if(x % i === 0) out += i + ",";
+            }
+
+            out += x; 
+            o.innerText = out;
+        }
+    </script>
+</body>
+</html> -->
+<html>
+    <body>
+        <input id ="p" placeholder="Enter number">
+        <button onclick="Factors()">
+            Show
+        </button>
+        <div id="o"></div>
+        <script>
+            function Factors(){
+                let v="";
+                let x =Number(p.value);
+                for(let i=1;i<x;i++){
+                    if(x%i===0){
+                         v += `${i},`;
+                    }
+                }
+                o.innerText=v;
+            }
+        </script>
+    </body>
+</html>
+
+
+

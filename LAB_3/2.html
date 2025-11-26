@@ -1,0 +1,16 @@
+<!-- Write a program to count the number of words in a given sentence. (b) -->
+ <!DOCTYPE html>
+ <html>
+    <body>
+        <input id="p" placeholder="Enter a sentance with space in between words" style="width:400px">
+        <button onclick="w()">Show</button>
+        <p id="o"></p>
+        <script>
+            function w(){
+            let str =document.getElementById("p").value.trim();
+            let c = str.split(" ").length;
+            o.innerText="Word count"+c;
+        }
+        </script>
+    </body>
+ </html>

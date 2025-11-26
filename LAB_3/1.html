@@ -1,0 +1,21 @@
+<!-- Write a program to display string length, uppercase, and lowercase versions of an input string. 
+(A) -->
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <input id="p" placeholder="Enter a string">
+        <button onclick="s()">Show</button>
+        <p id="o"></p>
+        <script>
+            function s(){
+            let str =document.getElementById("p").value;
+            let out ="";
+            out += "length: "+str.length+"<br>";
+            out += "uppercase: "+str.toUpperCase()+"<br>";
+            out += "lowercase: "+str.toLowerCase();
+            o.innerHTML=out;
+        }
+        </script>
+    </body>
+</html>

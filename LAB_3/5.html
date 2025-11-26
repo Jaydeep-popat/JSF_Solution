@@ -1,0 +1,21 @@
+<!-- Write a program to sort an array of student marks and display the highest and lowest marks -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <input id="p" placeholder="enter marks with comma in between" style="width: 200px;">
+        <button onclick="show()">show</button>
+        <div id="sorted"></div>
+        <div id="highest"></div>
+        <div id="lowest"></div>
+       <script>
+            function show(){
+                let arr = p.value.split(",").map(Number);
+                arr.sort((a,b)=>a-b);
+            
+            sorted.innerText = "Sorted: " + arr.join(", ");
+            highest.innerText = "Highest: " + arr[arr.length - 1];
+            lowest.innerText = "Lowest: " + arr[0];
+            }
+        </script>
+    </body>
+</html>

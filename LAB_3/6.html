@@ -1,0 +1,27 @@
+<!-- Write a program to calculate the total bill amount using map, filter, and reduce function -->
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Items</h1>
+    <div id="itemsBox"></div>
+    <button onclick="Total()">Total</button>
+    <div id="o"></div>
+    <script>
+        let items =[
+            {Name:"Apple",price:30},
+            {Name:"banana",price:40},
+            {Name:"kiwi",price:80},
+            {Name:"orange",price:60}
+        ];
+
+        itemsBox.innerHTML = items.map(
+            i=>i.Name +"-₹"+i.price
+        ).join("<br>");
+        function Total(){
+            let prices = items.map(i=>i.price);
+            let total = prices.reduce((a,b)=>a+b,0);
+            o.innerHTML = "Total Bill: ₹" + total;
+        }
+    </script>
+</body>
+</html>

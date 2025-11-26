@@ -1,0 +1,23 @@
+<!-- even number between range -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <input id="p1" placeholder="enter 1st number">
+        <input id="p2" placeholder="enter 2nd number">
+        <button onclick="range()">Show</button>
+        <div id="o"></div>
+        <script>
+            function range(){
+                let x =Number(p1.value);
+                let y =Number(p2.value);
+                let v ="";
+                for(let i=x;i<y;i++){
+                    if(i%2===0){
+                        v+=`${i},`;
+                    }
+                }
+                o.innerText=v;
+            }
+        </script>
+    </body>
+</html> 

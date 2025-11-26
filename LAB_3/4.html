@@ -1,0 +1,48 @@
+<!--  Write a program to add and remove items from a shopping cart using array methods -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Items</h3>
+
+<button onclick="add('Apple', 30)">Apple - ₹30</button>
+<button onclick="add('Banana', 10)">Banana - ₹10</button>
+<button onclick="add('Milk', 40)">Milk - ₹40</button>
+<button onclick="add('Bread', 25)">Bread - ₹25</button>
+<button onclick="add('Eggs', 50)">Eggs - ₹50</button>
+
+<h3>Cart</h3>
+<div id="cartBox"></div>
+<h3 id="total"></h3>
+
+<button onclick="clearCart()">Clear Cart</button>
+
+<script>
+let cart = [];
+
+function add(name, price){
+    cart.push({name, price});
+    cartShow();
+}
+
+function clearCart(){
+    cart = [];
+    cartShow();
+}
+
+function cartShow(){
+    let list = "";
+    let sum = 0;
+
+    for(let i = 0; i < cart.length; i++){
+        list += cart[i].name + " - ₹" + cart[i].price + "<br>";
+        sum += cart[i].price;
+    }
+
+    cartBox.innerHTML = list;
+    total.innerText = "Total: ₹" + sum;
+}
+</script>
+
+</body>
+</html>
